@@ -1,0 +1,16 @@
+
+# POST http://127.0.0.1:3001/auth/register
+# Content-Type: application/json
+
+# {
+#      "username":"atheeq",
+#      "password": "atheeq12345"
+# }
+
+# POST http://127.0.0.1:3001/auth/login
+# Content-Type: application/json
+
+# {
+#      "username":"atheeq",
+#      "password": "atheeq12345"
+# }
