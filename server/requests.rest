@@ -1,4 +1,4 @@
-
+//REGISTER
 # POST http://127.0.0.1:3001/auth/register
 # Content-Type: application/json
 
@@ -7,6 +7,7 @@
 #      "password": "atheeq12345"
 # }
 
+//LOGIN
 # POST http://127.0.0.1:3001/auth/login
 # Content-Type: application/json
 
@@ -14,3 +15,42 @@
 #      "username":"atheeq",
 #      "password": "atheeq12345"
 # }
+
+// GET ALL RECIPES
+# Get http://127.0.0.1:3001/recipe/
+# Content-Type: application/json
+
+
+//post RECIP
+# POST http://127.0.0.1:3001/recipe/createRecipe
+# Content-Type: application/json
+
+# {
+#   "title": "Delicious fish Curry",
+#   "instructions": "1. Heat oil in a pan. \n2. Add chopped onions and sauté until golden brown. \n3. Add ginger-garlic paste and cook for a minute. \n4. Add tomatoes, spices, and chicken pieces. \n5. Cook until chicken is tender. \n6. Garnish with fresh cilantro. \n7. Serve with rice or naan.",
+#   "ingredients": ["500g chicken", "2 onions", "3 tomatoes", "2 tbsp oil", "1 tsp ginger-garlic paste", "1 tsp turmeric", "1 tsp cumin powder", "1 tsp coriander powder", "1/2 tsp red chili powder", "Salt to taste"],
+#   "imgUrl": "https://example.com/chicken-curry.jpg",
+#   "time": 45,
+#   "userOwner": "64e4bd3eb29e536b6cbf6658"
+# }
+
+
+//push into the saved recipies of the user
+# PUT http://127.0.0.1:3001/recipe/pushRecipes
+# Content-Type: application/json
+
+# {
+#   "userId":"64e4bd3eb29e536b6cbf6658",
+#   "recipeId":"64e76d243386193e86ad6fec"
+# }
+
+
+//get the saved array from the user
+# Get http://127.0.0.1:3001/recipe/SavedRecipes/64e4bd3eb29e536b6cbf6658
+# Content-Type: application/json
+
+
+//get all saved recipe real recipe
+
+Get http://127.0.0.1:3001/recipe/getSavedRecipe/64e76d243386193e86ad6fec
+Content-Type: application/json
