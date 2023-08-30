@@ -1,0 +1,63 @@
+.recipe {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid violet;
+  border-radius: 3rem;
+  background-color: rgb(225, 193, 255);
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+.img-container {
+  width: 50%;
+}
+img {
+  width: 100%;
+  border-top-left-radius: 3rem;
+}
+.info-container {
+  width: 50%;
+  padding: 2rem;
+}
+.info-container h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(70, 0, 58);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+ul li {
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  margin-left: 2rem;
+  color: rgb(77, 17, 67);
+  list-style-type: decimal;
+}
+
+p {
+  padding: 1.5rem;
+  font-weight: 500;
+}
+
+.button {
+  background-color: blueviolet;
+  color: white;
+  padding: 1.5rem 3rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
