@@ -12,6 +12,7 @@ const Recipe = (props) => {
       const response = await axios.get(
         `http://127.0.0.1:3001/recipe/SavedRecipes/${userID}`
       );
+
       setSavedArray(response.data.savedRecipe);
     } catch (error) {
       console.log(error);
@@ -19,8 +20,10 @@ const Recipe = (props) => {
   };
 
   const isRecipeSaved = (id) => savedArray?.includes(id);
+
   useEffect(() => {
     fetchSaved();
+    isRecipeSaved();
   }, []);
 
   const saveRecipe = () => {
@@ -33,14 +36,15 @@ const Recipe = (props) => {
           recipeId: _id,
         })
         .then((res) => {
-          isRecipeSaved();
           alert("recipe Saved");
+          fetchSaved();
+          isRecipeSaved();
         })
         .catch((err) => {
           alert("someting went wrong");
         });
     } else {
-      alert("LOGIN or Redister to Save recipes");
+      alert("LOGIN or REGISTER to Save recipes");
     }
   };
 

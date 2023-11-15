@@ -36,13 +36,13 @@
 
 
 //push into the saved recipies of the user
-PUT http://127.0.0.1:3001/recipe/pushRecipes
-Content-Type: application/json
+# PUT http://127.0.0.1:3001/recipe/pushRecipes
+# Content-Type: application/json
 
-{
-  "userId":"64e4bd3eb29e536b6cbf6658",
-  "recipeId":"64e76d243386193e86ad6fec"
-}
+# {
+#   "userId":"64e4bd3eb29e536b6cbf6658",
+#   "recipeId":"64e76d243386193e86ad6fec"
+# }
 
 
 //get the saved array from the user
@@ -53,4 +53,10 @@ Content-Type: application/json
 //get all saved recipe real recipe
 
 # Get http://127.0.0.1:3001/recipe/getSavedRecipe/64e76d243386193e86ad6fec
+# Content-Type: application/json
+
+
+//insert many recipe
+
+# POST http://127.0.0.1:3001/recipe/insert-recipes
 # Content-Type: application/json

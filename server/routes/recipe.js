@@ -81,4 +81,23 @@ router.get("/getSavedRecipe/:id", async (req, res) => {
   }
 });
 
+// router.post("/insert-recipes", async (req, res) => {
+//   const recipesToInsert = [
+//   // ... (insert the other recipes here)
+//   ];
+
+//   try {
+//     const insertedRecipes = await RecipeModel.insertMany(recipesToInsert);
+//     res.status(201).json({
+//       message: "Recipes inserted successfully",
+//       recipes: insertedRecipes,
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res
+//       .status(500)
+//       .json({ error: "An error occurred while inserting recipes" });
+//   }
+// });
+
 export { router as recipeRouter };
